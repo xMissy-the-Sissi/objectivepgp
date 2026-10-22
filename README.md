@@ -30,6 +30,19 @@ The ObjectivePGP stays under a dual license:
 
 Not sure what to choose? check [FAQ](https://github.com/krzyzanowskim/ObjectivePGP/wiki/FAQ)
 
+## Run on your iPhone
+
+ObjectivePGP itself is a library, not an installable app. `PGPDemo.xcodeproj` is a small personal SwiftUI app that links the included framework, generates a key on the device, and encrypts a message. It does not send anything off the phone.
+
+On a Mac with Xcode:
+
+1. Open `PGPDemo.xcodeproj`.
+2. Select the PGPDemo target, then Signing & Capabilities, and choose your Personal Team. Change the bundle ID if Apple says it is already in use.
+3. Plug in the iPhone, select it as the run destination, and press Run.
+4. If iOS blocks the app, open Settings, then General, then VPN & Device Management, and trust your Apple ID.
+
+A free Apple ID install lasts about 7 days. Run it from Xcode again after that.
+
 ## Installation
 
 ### Swift Package Manager
